@@ -11,7 +11,6 @@ public class Solution
         {
             for (int j = 0; j < arr.GetLength(1); j++)
             {
-                //???
                 if (arr[i, j] == arr[j, i])
                 {
                     count++;
