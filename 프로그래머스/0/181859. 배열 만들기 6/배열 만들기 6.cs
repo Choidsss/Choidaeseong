@@ -6,37 +6,22 @@ public class Solution
 {
     public int[] solution(int[] arr)
     {
-        List<int> nums = new List<int>();
-        int[] stk = new int[] { };
-
+        var answer = new Stack<int>();
         for (int i=0;i<arr.Length;i++)
         {
-            if (nums.Count > 0)
-            {
-                if (nums.Last() == arr[i])
-                {
-                    nums.RemoveAt(nums.Count-1);
-                }
-                else
-                {
-                    nums.Add(arr[i]);
-                }
-            }
-            else
-            {
-                nums.Add(arr[i]);
-            }
+            if (answer.Count == 0)
+                answer.Push(arr[i]);
+            else if (answer.Peek() == arr[i])
+                answer.Pop();
+            else if (answer.Peek() != arr[i])
+                answer.Push(arr[i]);
         }
-
-        stk = nums.ToArray();
-
-        if (stk.Length != 0)
+        if (answer.Count == 0) answer.Push(-1);
+        int[] answerArr = new int[answer.Count];
+        for (int i=answer.Count-1;i>=0;i--)
         {
-            return stk;
+            answerArr[i] = answer.Pop();
         }
-        else
-        {
-            return new int[]{ -1};
-        }
+        return answerArr;
     }
 }
