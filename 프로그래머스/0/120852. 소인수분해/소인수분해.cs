@@ -26,7 +26,6 @@ public class Solution
             }
         }
         answer = list.Distinct().ToArray();
-        Array.Sort(answer);
         return answer;
     }
 }
