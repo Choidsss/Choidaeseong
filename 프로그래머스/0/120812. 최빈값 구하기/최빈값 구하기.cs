@@ -45,7 +45,7 @@ public class Solution
         {
             answer = array[0];
         }
-        else if (flag || maxValue == 1)
+        else if (flag)
         {
             answer = -1;
         }
