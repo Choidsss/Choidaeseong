@@ -30,7 +30,6 @@ public class Solution
                     }
                     else
                     {
-                        // 만약 x + 3이 정답이라 가정하면?
                         if (numstr == "" || numstr == null)
                         {
                             num1 += 1;
