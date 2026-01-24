@@ -6,7 +6,6 @@ public class Solution
     public int[] solution(string s)
     {
         int[] answer = new int[s.Length];
-        int storedIndex = 0;
         Dictionary<char, int> dic = new Dictionary<char, int>();
 
         for (int i=0;i<s.Length;i++)
