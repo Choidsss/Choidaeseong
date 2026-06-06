@@ -22,6 +22,7 @@ public class Solution
             }
         }
 
+        //일요일이 시작일때를 생각하지 못함.....
         for (int i = 0; i < timelogs.GetLength(0); i++)
         {
             int start = startday;
